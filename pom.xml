@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.malinowski.michal</groupId>
-    <artifactId>GiveClothes</artifactId>
+    <artifactId>GiveThing</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>GiveClothes</name>
+    <name>GiveThing</name>
     <description>Charity project</description>
 
     <properties>
