@@ -3,12 +3,10 @@ package io.malinowski.michal.give_thing.domain.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.Value;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -17,8 +15,8 @@ import java.util.List;
 @Table(name = "donations")
 @Getter
 @Setter
-@ToString(callSuper = true)
-public class Donation extends ParentEntity{
+@ToString(callSuper = true, exclude = {"categories", "institution"})
+public class Donation extends ParentEntity {
     @Column(nullable = false, unique = true)
     private String name;
     @Column(nullable = false, unique = true)
