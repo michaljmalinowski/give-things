@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @ToString(callSuper = true)
-public class Institution extends ParentEntity{
+public class Institution extends ParentEntity {
     @Column(nullable = false, unique = true)
     private String name;
     @Column(nullable = false, unique = true)
