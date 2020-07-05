@@ -1,43 +1,38 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
-
-    <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>
 </head>
 <body>
-<c:import url="/resources/header.jsp"/>
+<c:import url="part/header.jsp"/>
 
 <section class="stats">
     <div class="container container--85">
         <div class="stats--item">
             <em>${countSack}</em>
-
             <h3>Oddanych worków</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
                 tempora!</p>
         </div>
-
         <div class="stats--item">
             <em>${countDonation}</em>
             <h3>Przekazanych darów</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
                 quam.</p>
         </div>
-
     </div>
 </section>
 
 <section class="steps">
     <h2>Wystarczą 4 proste kroki</h2>
-
     <div class="steps--container">
         <div class="steps--item">
             <span class="icon icon--hands"></span>
@@ -60,7 +55,6 @@
             <p>kurier przyjedzie w dogodnym terminie</p>
         </div>
     </div>
-
     <a href="#" class="btn btn--large">Załóż konto</a>
 </section>
 
@@ -69,9 +63,9 @@
         <h2>O nas</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas vitae animi rem pariatur incidunt libero
             optio esse quisquam illo omnis.</p>
-        <img src="<c:url value="resources/images/signature.svg"/>" class="about-us--text-signature" alt="Signature"/>
+        <img src="<c:url value="/resources/images/signature.svg"/>" class="about-us--text-signature" alt="Signature"/>
     </div>
-    <div class="about-us--image"><img src="<c:url value="resources/images/about-us.jpg"/>" alt="People in circle"/>
+    <div class="about-us--image"><img src="<c:url value="/resources/images/about-us.jpg"/>" alt="People in circle"/>
     </div>
 </section>
 
@@ -98,11 +92,10 @@
             </c:forEach>
         </ul>
     </div>
-
 </section>
 
-<c:import url="/resources/footer.jsp"/>
+<c:import url="part/footer.jsp"/>
 
-<script src="<c:url value="resources/js/app.js"/>"></script>
+<script src="<c:url value="/resources/js/app.js"/>"></script>
 </body>
 </html>
