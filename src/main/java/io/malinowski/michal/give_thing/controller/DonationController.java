@@ -1,4 +1,4 @@
-package io.malinowski.michal.give_thing;
+package io.malinowski.michal.give_thing.controller;
 
 import io.malinowski.michal.give_thing.dto.NewDonationDto;
 import io.malinowski.michal.give_thing.service.CategoryService;
@@ -12,10 +12,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 
 @Controller
+@RequestMapping("/donation")
 public class DonationController {
 
     private static final Logger log = LoggerFactory.getLogger(DonationController.class);
@@ -29,7 +31,7 @@ public class DonationController {
         this.donationService = donationService;
     }
 
-    @GetMapping("/donation/new")
+    @GetMapping("new")
     public String prepareDonationForm(Model model) {
         model.addAttribute("categories", categoryService.findAll());
         model.addAttribute("institutions", institutionService.findAll());
@@ -38,7 +40,7 @@ public class DonationController {
         return "donation-form";
     }
 
-    @PostMapping("/donation/new")
+    @PostMapping("new")
     public String processDonationForm(@ModelAttribute("data") @Valid NewDonationDto newDonationDto, BindingResult bindingResult) {
         log.info("donation before save: {}", newDonationDto);
         if (bindingResult.hasErrors()) {

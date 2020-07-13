@@ -1,4 +1,4 @@
-package io.malinowski.michal.give_thing;
+package io.malinowski.michal.give_thing.controller;
 
 import io.malinowski.michal.give_thing.domain.dao.InstitutionDao;
 import io.malinowski.michal.give_thing.service.DonationService;
